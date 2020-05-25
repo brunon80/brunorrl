@@ -1,0 +1,9 @@
+.top-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    list-style: none
+    
+}
+.top-header-item {
+    padding: 10px;
+}
