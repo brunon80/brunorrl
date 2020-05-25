@@ -1,6 +1,7 @@
 import React from 'react'
 import RootRouter from './routes'
-import './App.css'
+import './normalize.css'
+import './app.scss'
 
 const App: React.FC = () => <RootRouter />
 

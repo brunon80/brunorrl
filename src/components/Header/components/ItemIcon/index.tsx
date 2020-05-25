@@ -1,18 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './styles.scss'
 
 type ItemProps = {
     name: string
     link: string
 }
 
-const Item: React.FC<ItemProps> = ({ name, link }) => {
+const ItemIcon: React.FC<ItemProps> = ({ name, link }) => {
     return (
-        <li className="top-nav-item rounded">
+        <li className="top-nnav-icon">
             <Link to={link}>{name}</Link>
         </li>
     )
 }
 
-export default Item
+export default ItemIcon
