@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../Container'
+import Container from '../../../../components/Container'
 
 // import { Container } from './styles';
 
@@ -8,12 +8,12 @@ const About: React.FC = () => {
         <Container sessionClassName="colored-session">
             <div className="column">
                 <div className="about-wrapper">
-                    <h1 className="title light-text">Olá, Me chamo Bruno. Prazer em conhecer você</h1>
+                    <h1 className="title light-text">Olá, me chamo Bruno. Prazer em conhecer você</h1>
                     <h2 className="subtitle light-text">
-                        Sou engenheiro de computação com especialidade em Fontend (Mobile e Web) trabalho desenvolvendo
-                        interfaces usando React (desde a versão 0.13 até a mais recente, cerca de 5 anos) para web e
-                        React Native (desde a versão 0.40, cerca de 3 anos) para dispositivos móveis, assim, criando
-                        aplicações hibridas para todas as plataformas.
+                        Desde o início da minnha jornada, sou apaixonado por tecnologia, me formei em engenharia de
+                        computação e me tornnei especialista em Fontend (Mobile e Web) trabalho desenvolvendo interfaces
+                        web usando React a cerca de 5 anos e React Native para dispositivos móveis a cerca de 3 anos,
+                        assim, satisfazendo clientes e criando aplicações hibridas para todas as plataformas.
                     </h2>
                 </div>
             </div>
