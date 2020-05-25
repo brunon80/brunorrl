@@ -1,16 +1,41 @@
-.section {
-    .title {
-        font-size: 40px;
-        font-weight: bolder;
-        text-align: center;
+@import '../../../src/styles/variables';
+
+.title {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    &.light-text {
+        color: white;
+    }
+}
+.subtitle {
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+    &.light-text {
+        color: white;
+    }
+}
+.bg {
+    max-width: 1024px;
+    width: 100%;
+}
+
+.about-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    padding: 7rem;
+    padding-bottom: 15rem;
+}
+        
+.colored-session {
+    background-color: $base-color;
+    .title{
+        font-size: 2rem;
+        font-weight: 800;
     }
     .subtitle {
-        font-size: 25px;
-        font-weight: 200;
-        text-align: center;
-    }
-    .bg {
-        max-width: 1024px;
-        width: 100%;
+        font-weight: 300;
+        font-size: 1.25rem
     }
 }

@@ -1,11 +1,13 @@
 import React from 'react'
-import './styles.scss'
 import Hero from './components/Hero'
+import About from './components/About'
+import './styles.scss'
 
 const Home: React.FC = () => {
     return (
         <>
             <Hero />
+            <About />
         </>
     )
 }
