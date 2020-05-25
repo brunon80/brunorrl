@@ -1,5 +1,5 @@
 import React from 'react'
-import Item from './components/ItemText'
+import ItemText from './components/ItemText'
 
 import './styles.css'
 
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
         <nav className="top-header-container">
             <ul className="top-header-wrapper">
                 {itemLinks.map(({ name, link }) => (
-                    <Item key={name} name={name} link={link} />
+                    <ItemText key={name} name={name} link={link} />
                 ))}
             </ul>
         </nav>
