@@ -17,7 +17,6 @@
         margin-right: 2em;
         border-radius: 15px;
         overflow: hidden;
-        background-color: $kinbox-base;
         img {
             transition: 0.25s ease-in-out;
             position: absolute;
@@ -25,6 +24,15 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
+        }
+        &.kinbox {
+            background-color: $kinbox-base;
+        }
+        &.ganhomais {
+            background-color: $ganhomais-base;
+        }
+        &.carmais {
+            background-color: $carmais-base;
         }
         .caption {
             flex: 1 1;

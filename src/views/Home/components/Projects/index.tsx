@@ -2,6 +2,8 @@ import React from 'react'
 import Container from '../../../../components/Container'
 
 import kinbox from '../../../../assets/images/project-kinbox.png'
+import ganhomais from '../../../../assets/images/project-gannhomais.png'
+import carmais from '../../../../assets/images/project-carmais.png'
 
 import './styles.scss'
 
@@ -15,7 +17,7 @@ const Projects: React.FC = () => {
                     <a href="mailto:bruno.rocha2008@gmail.com">Email</a>
                 </h2>
                 <div className="projects-wrapper">
-                    <figure className="card">
+                    <figure className="card kinbox">
                         <img className="overlay" src={kinbox} alt="Kinbox" />
                         <figcaption className="caption">
                             <h1 className="title">
@@ -26,30 +28,29 @@ const Projects: React.FC = () => {
                             </a>
                         </figcaption>
                     </figure>
-                    <figure className="card">
-                        <img
-                            className="overlay"
-                            src="https://mattfarley.ca/img/projects/wfdesignbuild.png"
-                            alt="GanhoMais"
-                        />
+                    <figure className="card ganhomais">
+                        <img className="overlay" src={ganhomais} alt="GanhoMais" />
                         <figcaption className="caption">
                             <h1 className="title">
-                                Kinbox é uma plataforma de comunicação que uni o atendimento de várias redes sociais
+                                O GanhoMais é um aplicativo de crédito consignado que otimiza suas dívidas e oferece
+                                serviços
                             </h1>
-                            <a href="https://ganhomais.com.br:5000">Visite o site</a>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.genpp.GanhoMais&hl=pt_BR"
+                                target="blank"
+                            >
+                                Veja o app
+                            </a>
                         </figcaption>
                     </figure>
-                    <figure className="card">
-                        <img
-                            className="overlay"
-                            src="https://mattfarley.ca/img/projects/wfdesignbuild.png"
-                            alt="GanhoMais"
-                        />
+                    <figure className="card carmais">
+                        <img className="overlay" src={carmais} alt="Carmais" />
                         <figcaption className="caption">
                             <h1 className="title">
-                                Kinbox é uma plataforma de comunicação que uni o atendimento de várias redes sociais
+                                O aplicativo é usado internamente pelos funcionáros para aumentar a produtividade da
+                                empresa
                             </h1>
-                            <a href="https://ganhomais.com.br:5000">Visite o site</a>
+                            <a href="https://www.carmais.com.br">Site da empresa</a>
                         </figcaption>
                     </figure>
                 </div>
