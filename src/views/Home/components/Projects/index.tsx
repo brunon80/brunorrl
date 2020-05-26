@@ -50,7 +50,9 @@ const Projects: React.FC = () => {
                                 O aplicativo é usado internamente pelos funcionáros para aumentar a produtividade da
                                 empresa
                             </h1>
-                            <a href="https://www.carmais.com.br">Site da empresa</a>
+                            <a target="blank" href="https://www.carmais.com.br">
+                                Site da empresa
+                            </a>
                         </figcaption>
                     </figure>
                 </div>
