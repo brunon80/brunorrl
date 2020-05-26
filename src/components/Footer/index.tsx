@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faCopyright, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+import logoBranca from '../../assets/logo-branca.png'
 import './styles.scss'
 
 const Footer: React.FC = () => {
@@ -11,7 +12,14 @@ const Footer: React.FC = () => {
         <footer className="session footer">
             <div className="container is-narrow">
                 <div className="centered column">
-                    <Link to="/">Logo Branca</Link>
+                    <Link
+                        onClick={() => {
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }}
+                        to="/"
+                    >
+                        <img className="logo-branca" src={logoBranca} alt="logo footer" />
+                    </Link>
                     <div className="title">Vivendo, aprendendo e aprimorando um dia de cada vez</div>
                     <div className="social-icons">
                         <a href="https://www.instagram.com/bruno.rrl/" target="_blank" rel="noopener noreferrer">
