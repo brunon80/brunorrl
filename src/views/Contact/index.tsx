@@ -13,16 +13,16 @@ export const Contact: React.FC = () => {
                     <div className="container-form">
                         <div className="input-group">
                             <label htmlFor="name">Name:</label>
-                            <input type="text" id="name" name="name" />
+                            <input type="text" name="name" />
                         </div>
                         <div className="input-group">
                             <label htmlFor="email">Email:</label>
-                            <input type="email" id="email" name="email" />
+                            <input type="email" name="email" />
                         </div>
                     </div>
                     <div className="input-group">
                         <label htmlFor="details">Detalhes:</label>
-                        <textarea className="details" name="details" id="details" cols={30} rows={10}></textarea>
+                        <textarea className="details" name="details" cols={30} rows={10}></textarea>
                     </div>
                     <button type="submit">Enviar</button>
                 </form>
