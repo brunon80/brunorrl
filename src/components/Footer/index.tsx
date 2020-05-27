@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
                     <div className="copyright">
-                        <span>Feito do zero por mim</span>
+                        <span>Feito em React.js por mim</span>
                         <span>
                             <FontAwesomeIcon className="icon" icon={faCopyright} />
                         </span>
