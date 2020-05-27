@@ -10,14 +10,15 @@ const encode = (data: any) => {
 
 export const Contact: React.FC = () => {
     const [state, setState] = useState({})
+    const [isSent, setSent] = useState(false)
     function handleSubmit(event: FormEvent) {
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'bruno-contact', ...state }),
         })
-            .then(() => alert('Success!'))
-            .catch((error) => alert(error))
+            .then(() => setSent(true))
+            .catch((error) => console.log(error))
 
         event.preventDefault()
     }
@@ -48,13 +49,8 @@ export const Contact: React.FC = () => {
                     </div>
                     <div className="input-group">
                         <label htmlFor="details">Detalhes:</label>
-                        <textarea
-                            onChange={handleChange}
-                            className="details"
-                            name="details"
-                            cols={30}
-                            rows={10}
-                        ></textarea>
+                        <textarea onChange={handleChange} className="details" name="details" cols={30} rows={10} />
+                        {isSent && <p className="success">Obrigado! Sua mensagem foi enviada com sucesso!</p>}
                     </div>
                     <button type="submit">Enviar</button>
                 </form>
