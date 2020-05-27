@@ -6,7 +6,7 @@ import './styles.scss'
 
 const Call: React.FC = () => {
     return (
-        <Container sessionClassName="call-to-action colored-session">
+        <Container sessionClassName="call-to-action colored-session no-margin">
             <div className="column centered">
                 <div className="wrapper">
                     <div className="item text">Inicie um projeto</div>

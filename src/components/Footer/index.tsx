@@ -9,7 +9,7 @@ import './styles.scss'
 
 const Footer: React.FC = () => {
     return (
-        <footer className="session footer">
+        <footer className="session footer no-margin">
             <div className="container is-narrow">
                 <div className="centered column">
                     <Link

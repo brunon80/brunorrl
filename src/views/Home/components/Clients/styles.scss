@@ -1,18 +1,32 @@
+@import '../../../../../src/styles/variables';
 .clients {
     .client-grid {
         .grid-container {
             display: grid;
             grid-template-columns: auto auto auto;
-            // background-color: #2196F3;
             padding: 10px;
             align-items: center;
+            @media screen and (max-width: $break-small) {
+              grid-template-columns: auto ;
+            }
+            @media screen and (min-width: $break-medium) {
+              grid-template-columns: auto auto ;
+          }
+            @media screen and (min-width: $break-large) {
+              grid-template-columns: auto auto auto;
+            }
           }
           .grid-item {
-            // background-color: rgba(255, 255, 255, 0.8);
-            // border: 1px solid rgba(0, 0, 0, 0.8);
             padding: 20px;
             font-size: 30px;
             text-align: center;
+            margin-bottom: 5rem;
+            @media screen and (max-width: $break-small) {
+              margin-bottom: 0;
+            }
+            @media screen and (min-width: $break-medium) {
+              margin-bottom: 0;
+            }
             img {
                 filter: grayscale(1);
                 width: 200px;

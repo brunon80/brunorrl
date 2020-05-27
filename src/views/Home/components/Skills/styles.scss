@@ -1,7 +1,7 @@
 @import '../../../../../src/styles/variables';
 
 .skills {
-    margin-top: -14rem;
+    margin-top: -14rem !important;
     padding-bottom: 1rem; 
 }
 .skill-grid-container {
@@ -15,6 +15,12 @@
     text-align: center;
     flex-grow: 1;
     flex-shrink: 1;
+    // @media screen and (max-width: $break-small) {
+    //     padding: 10px !important;
+    // }
+    @media screen and (min-width: $break-medium) {
+        padding: 20px !important;
+    }
         &.column {
             border-bottom: 0px solid #E6ECF8;
             border-right: 1px solid #E6ECF8;

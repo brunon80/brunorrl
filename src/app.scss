@@ -1,3 +1,13 @@
+@import './styles/variables';
+
+.session {
+    margin: 100px 0;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
 .container {
     max-width: 1344px;
     -webkit-box-flex: 1;
@@ -40,6 +50,12 @@
 
 .is-half {
     width: 50%;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+    @media screen and (min-width: $break-medium) {
+        width: 100%;
+    }
 }
 
 .is-three-quarters {
