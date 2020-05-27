@@ -1,0 +1,43 @@
+@import '../../../../../src/styles/variables';
+
+.call-to-action {
+    margin-top: 50px;
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: $secondary-color;
+        padding: 50px;
+        border-radius: 15px;
+        margin-top: -4em;
+        align-items: center;
+        justify-content: center;
+        .item {
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            &.text {
+                flex: 1;
+                font-weight: bolder;
+                font-size: 30px;
+            }
+            &.decription {
+                flex: 2;
+                font-size: 20px;
+            }
+            &.action {
+                flex: 1;
+                border: 1px solid $base-color;
+                font-size: 20px;
+                border-radius: 100px;
+                margin: 20px;
+                transition: 0.25s ease-in-out;
+                &:hover {
+                    transition: 0.25s ease-in-out;
+                    background-color: $base-color;
+                }
+            }
+        }
+    }
+}
