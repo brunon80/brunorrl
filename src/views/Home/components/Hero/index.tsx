@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             <div className="column centered">
                 <h1 className="title">Desenvolvedor Front-end especialista em React e React Native</h1>
                 <h2 className="subtitle">
-                    Desenvoldo soluções, sites e aplicativos, amo fazer isso
+                    Desenvolvo soluções, sites e aplicativos, amo fazer isso
                     <span aria-label="heart" role="img">
                         ❤️
                     </span>
