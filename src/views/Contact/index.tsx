@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
                 <div className="wrapper is-three-quarters">
                     <h2 className="title">Estou muito empolgado para saber como é seu projeto. Pronto para começar?</h2>
                 </div>
-                <form className="form" name="bruno-contact" method="POST" data-netlify="true" hidden>
+                <form className="form" name="bruno-contact" method="post">
                     <div className="container-form">
                         <div className="input-group">
                             <label htmlFor="name">Name:</label>
