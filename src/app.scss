@@ -60,4 +60,10 @@
 
 .is-three-quarters {
     width: 75%;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+    @media screen and (min-width: $break-medium) {
+        width: 100%;
+    }
 }
