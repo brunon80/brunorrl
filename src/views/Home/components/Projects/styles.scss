@@ -1,73 +1,81 @@
 @import '../../../../../src/styles/variables';
-.projects-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0 4rem;
-    .card {
-        position: relative;
-        flex: 1 1;
-        flex-basis: 22%;
+.projects {
+    margin-top: 2.5rem;
+    .subtitle {
+        a {
+            color:$base-color;
+        }
+    }
+    .projects-wrapper {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
-        padding: 2em;
-        margin-right: 2em;
-        border-radius: 15px;
-        overflow: hidden;
-        object-fit: cover;
-        img {
-            transition: 0.25s ease-in-out;
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        &.kinbox {
-            background-color: $kinbox-base;
-        }
-        &.ganhomais {
-            background-color: $ganhomais-base;
-        }
-        &.carmais {
-            background-color: $carmais-base;
-        }
-        .caption {
+        padding: 2rem 0 4rem;
+        .card {
+            position: relative;
             flex: 1 1;
-            width: 100%;
+            flex-basis: 22%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            .title {
-                color: white;
-                font-size: 20px;
-            }
-            a {
-                color: white;
-                font-size: 18px;
-                border: 1px solid $base-color;
-                padding: 20px 40px;
-                margin: 20px;
-                border-radius: 100px;
-                text-align: center;
-                white-space: nowrap;
+            padding: 2em;
+            margin-right: 2em;
+            border-radius: 15px;
+            overflow: hidden;
+            object-fit: cover;
+            img {
                 transition: 0.25s ease-in-out;
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
             }
-            a:hover {
-                transition: 0.25s ease-in-out;
-                background-color: $base-color;
+            &.kinbox {
+                background-color: $kinbox-base;
             }
+            &.ganhomais {
+                background-color: $ganhomais-base;
+            }
+            &.carmais {
+                background-color: $carmais-base;
+            }
+            .caption {
+                flex: 1 1;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .title {
+                    color: white;
+                    font-size: 20px;
+                }
+                a {
+                    color: white;
+                    font-size: 18px;
+                    border: 1px solid $base-color;
+                    padding: 20px 40px;
+                    margin: 20px;
+                    border-radius: 100px;
+                    text-align: center;
+                    white-space: nowrap;
+                    transition: 0.25s ease-in-out;
+                }
+                a:hover {
+                    transition: 0.25s ease-in-out;
+                    background-color: $base-color;
+                }
+            }
+        }:hover img {
+            transition: 0.25s ease-in-out;
+            opacity: 0;
+            transform: scale(1.1);
         }
-    }:hover img {
-        transition: 0.25s ease-in-out;
-        opacity: 0;
-        transform: scale(1.1);
-    }
-    :last-child {
-        margin-right: 0;
+        :last-child {
+            margin-right: 0;
+        }
     }
 }

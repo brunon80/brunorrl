@@ -9,7 +9,7 @@ import './styles.scss'
 
 const Projects: React.FC = () => {
     return (
-        <Container>
+        <Container sessionClassName="projects">
             <div className="column">
                 <h1 className="title">Meu trabalho recente</h1>
                 <h2 className="subtitle">
