@@ -13,7 +13,13 @@ const Call: React.FC = () => {
                     <div className="item decription">
                         Interessado em trabalhar comigo? Nós deveríamos conversar. Eu pago o café.
                     </div>
-                    <Link to="/contact" className="item action">
+                    <Link
+                        onClick={() => {
+                            window.scrollTo({ top: 0 })
+                        }}
+                        to="/contact"
+                        className="item action"
+                    >
                         Vamos fazer isso
                     </Link>
                 </div>

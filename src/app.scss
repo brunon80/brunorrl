@@ -66,4 +66,10 @@
     @media screen and (min-width: $break-medium) {
         width: 100%;
     }
+    @media screen and (min-width: $break-large) {
+        width: 75%;
+    }
+    @media screen and (min-width: $break-pc) {
+        width: 75%;
+    }
 }
