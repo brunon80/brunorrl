@@ -1,14 +1,21 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+
 import Container from '../../../../components/Container'
 import homeBg from '../../../../assets/images/home-bg.png'
 
-// import { Container } from './styles';
-
 const Hero: React.FC = () => {
+    const { t, i18n } = useTranslation()
     return (
         <Container sessionClassName="no-margin">
-            <div className="column centered">
-                <h1 className="title">Desenvolvedor Front-end especialista em React e React Native</h1>
+            <div
+                onClick={() => {
+                    const language = i18n.language
+                    i18n.changeLanguage(language === 'pt_br' ? 'en' : 'pt_br')
+                }}
+                className="column centered"
+            >
+                <h1 className="title">{t('hero.title')}</h1>
                 <h2 className="subtitle">
                     Desenvolvo soluções, sites e aplicativos, amo fazer isso
                     <span aria-label="heart" role="img">
