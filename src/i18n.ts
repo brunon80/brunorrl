@@ -5,9 +5,7 @@ import Backend from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import en from './i18n/translation.en'
 import pt_br from './i18n/translation.pt_br'
-// not like to use this?
-// have a look at the Quick start guide
-// for passing in lng and translations on init
+
 const availableLanguages = ['en-US', 'pt-BR', 'en', 'pt']
 i18n.use(Backend)
     .use(LanguageDetector)
