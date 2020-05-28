@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 import Container from '../../../../components/Container'
 
 import './styles.scss'
 
 const Call: React.FC = () => {
+    const { t } = useTranslation()
     return (
         <Container sessionClassName="call-to-action colored-session no-margin">
             <div className="column centered">
                 <div className="wrapper">
-                    <div className="item text">Inicie um projeto</div>
-                    <div className="item decription">
-                        Interessado em trabalhar comigo? Nós deveríamos conversar. Eu pago o café.
-                    </div>
+                    <div className="item text">{t('call.title')}</div>
+                    <div className="item decription">{t('call.description')}</div>
                     <Link
                         onClick={() => {
                             window.scrollTo({ top: 0 })
@@ -20,7 +21,7 @@ const Call: React.FC = () => {
                         to="/contact"
                         className="item action"
                     >
-                        Vamos fazer isso
+                        {t('call.action')}
                     </Link>
                 </div>
             </div>

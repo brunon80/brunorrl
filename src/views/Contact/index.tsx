@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react'
+import { useTranslation } from 'react-i18next'
 import Container from '../../components/Container'
 import './styles.scss'
 
@@ -9,6 +10,8 @@ const encode = (data: any) => {
 }
 
 export const Contact: React.FC = () => {
+    const { t } = useTranslation()
+
     const [state, setState] = useState({})
     const [isSent, setSent] = useState(false)
     function handleSubmit(event: FormEvent) {
@@ -34,25 +37,25 @@ export const Contact: React.FC = () => {
         <Container sessionClassName="contact">
             <div className="column centered">
                 <div className="wrapper is-three-quarters">
-                    <h2 className="title">Estou muito empolgado para saber como é seu projeto. Pronto para começar?</h2>
+                    <h2 className="title">{t('contact.title')}</h2>
                 </div>
                 <form onSubmit={handleSubmit} className="form" name="bruno-contact" method="post">
                     <div className="container-form">
                         <div className="input-group">
-                            <label htmlFor="name">Nome:</label>
+                            <label htmlFor="name">{t('contact.form.name')}:</label>
                             <input onChange={handleChange} type="text" name="name" />
                         </div>
                         <div className="input-group">
-                            <label htmlFor="email">Email:</label>
+                            <label htmlFor="email">{t('contact.form.email')}:</label>
                             <input onChange={handleChange} type="email" name="email" />
                         </div>
                     </div>
                     <div className="input-group">
-                        <label htmlFor="details">Mensagem:</label>
+                        <label htmlFor="details">{t('contact.form.message')}:</label>
                         <textarea onChange={handleChange} className="details" name="details" cols={30} rows={10} />
                         {isSent && <p className="success">Obrigado! Sua mensagem foi enviada com sucesso!</p>}
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit">{t('contact.form.submit')}</button>
                 </form>
             </div>
         </Container>

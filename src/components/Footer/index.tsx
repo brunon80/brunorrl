@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faCopyright, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from 'react-i18next'
 
 import logoBranca from '../../assets/logo-branca.png'
 import './styles.scss'
 
 const Footer: React.FC = () => {
+    const { t } = useTranslation()
     return (
         <footer className="session footer no-margin">
             <div className="container is-narrow">
@@ -20,7 +22,7 @@ const Footer: React.FC = () => {
                     >
                         <img className="logo-branca" src={logoBranca} alt="logo footer" />
                     </Link>
-                    <div className="title">Vivendo, aprendendo e aprimorando um dia de cada vez</div>
+                    <div className="title">{t('footer.title')}</div>
                     <div className="social-icons">
                         <a href="https://www.instagram.com/bruno.rrl/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon className="icon" icon={faInstagram} />
@@ -43,7 +45,7 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
                     <div className="copyright">
-                        <span>Feito em React.js por mim</span>
+                        <span>{t('footer.ownner')}</span>
                         <span>
                             <FontAwesomeIcon className="icon" icon={faCopyright} />
                         </span>

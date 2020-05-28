@@ -2,13 +2,14 @@ import React from 'react'
 import ItemText from './components/ItemText'
 import ItemImage from './components/ItemImage'
 
-import './styles.css'
+import { useTranslation } from 'react-i18next'
+
+import './styles.scss'
 
 import logo from '../../assets/logo.png'
 
 const itemLinks = [
     {
-        name: 'Diga um Olá',
         link: '/contact',
     },
 ]
@@ -21,6 +22,10 @@ const itemImages = [
 ]
 
 const Header: React.FC = () => {
+    const { t, i18n } = useTranslation()
+    function changeLanguage(location: string) {
+        i18n.changeLanguage(location)
+    }
     return (
         <nav className="top-nav-container">
             <ul className="container top-nav-wrapper">
@@ -30,8 +35,26 @@ const Header: React.FC = () => {
                     ))}
                 </div>
                 <div className="top-nav-text-links-wrapper">
-                    {itemLinks.map(({ name, link }) => (
-                        <ItemText key={name} name={name} link={link} />
+                    <div className="flags">
+                        <span
+                            aria-label="united states flag"
+                            role="img"
+                            onClick={() => changeLanguage('en-US')}
+                            className="us"
+                        >
+                            🇺🇸
+                        </span>
+                        <span
+                            aria-label="brazil flag"
+                            role="img"
+                            onClick={() => changeLanguage('pt-BR')}
+                            className="br"
+                        >
+                            🇧🇷
+                        </span>
+                    </div>
+                    {itemLinks.map(({ link }) => (
+                        <ItemText key={link} name={t('header.callToAction')} link={link} />
                     ))}
                 </div>
             </ul>

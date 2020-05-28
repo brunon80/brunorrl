@@ -5,19 +5,13 @@ import Container from '../../../../components/Container'
 import homeBg from '../../../../assets/images/home-bg.png'
 
 const Hero: React.FC = () => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     return (
         <Container sessionClassName="no-margin">
-            <div
-                onClick={() => {
-                    const language = i18n.language
-                    i18n.changeLanguage(language === 'pt_br' ? 'en' : 'pt_br')
-                }}
-                className="column centered"
-            >
+            <div className="column centered">
                 <h1 className="title">{t('hero.title')}</h1>
                 <h2 className="subtitle">
-                    Desenvolvo soluções, sites e aplicativos, amo fazer isso
+                    {t('hero.description')}
                     <span aria-label="heart" role="img">
                         ❤️
                     </span>
