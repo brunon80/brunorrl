@@ -74,7 +74,7 @@ export default {
         },
         projects: {
             title: 'Meu trabalho recente',
-            description: 'Esses são alguns dos projetos que trabalhei. Ficou curioso? me envie um',
+            description: 'Esses são alguns dos projetos que trabalhei. Ficou curioso? me envie um ',
             kinbox: {
                 description: 'Kinbox é uma plataforma de comunicação que uni o atendimento de várias redes sociais',
                 action: 'Visite o site',
