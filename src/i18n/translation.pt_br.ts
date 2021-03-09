@@ -64,7 +64,7 @@ export default {
                 session3: {
                     title: 'Experiência',
                     experience: '+5 anos de empresa própria',
-                    projects: '2 grandes projetos',
+                    projects: '3 grandes projetos',
                     jira: 'Jira',
                     trello: 'Trello',
                     todoist: 'Todoist',
@@ -88,6 +88,10 @@ export default {
                 description:
                     'O aplicativo é usado internamente pelos funcionáros para aumentar a produtividade da empresa',
                 action: 'Site da empresa',
+            },
+            somapay: {
+                description: 'Todos os pagamentos em um só lugar. Em poucos cliques, sem burocracia.',
+                action: 'Conheça',
             },
         },
         clients: {

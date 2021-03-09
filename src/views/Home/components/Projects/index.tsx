@@ -6,6 +6,7 @@ import Container from '../../../../components/Container'
 import kinbox from '../../../../assets/images/project-kinbox.png'
 import ganhomais from '../../../../assets/images/project-gannhomais.png'
 import carmais from '../../../../assets/images/project-carmais.png'
+import somapay from '../../../../assets/images/project-somapay.png'
 
 import './styles.scss'
 
@@ -47,6 +48,15 @@ const Projects: React.FC = () => {
                             <h1 className="title">{t('projects.carmais.description')}</h1>
                             <a target="blank" href="https://www.carmais.com.br">
                                 {t('projects.carmais.action')}
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure className="card somapay">
+                        <img className="overlay" src={somapay} alt="Somapay" />
+                        <figcaption className="caption">
+                            <h1 className="title">{t('projects.somapay.description')}</h1>
+                            <a target="blank" href="https://somapay.app.link/">
+                                {t('projects.somapay.action')}
                             </a>
                         </figcaption>
                     </figure>

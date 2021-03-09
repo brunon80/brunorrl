@@ -65,7 +65,7 @@ export default {
                 session3: {
                     title: 'Experience',
                     experience: '+5 years of own company',
-                    projects: '2 great projects',
+                    projects: '3 big projects',
                     jira: 'Jira',
                     trello: 'Trello',
                     todoist: 'Todoist',
@@ -87,6 +87,10 @@ export default {
             carmais: {
                 description: "The application is used internally by employees to increase the company's productivity",
                 action: 'Company website',
+            },
+            somapay: {
+                description: 'All payments in one place. In a few clicks, without bureaucracy.',
+                action: 'See more',
             },
         },
         clients: {

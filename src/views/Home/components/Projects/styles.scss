@@ -11,15 +11,15 @@
         grid-template-columns: auto auto auto;
         align-items: center;
         padding: 2rem 0 4rem;
-        @media screen and (max-width: $break-small) {
-            grid-template-columns: auto;
-        }
-        @media screen and (min-width: $break-medium) {
-            grid-template-columns: auto auto;
-        }
-        @media screen and (min-width: $break-pc) {
+        @media screen and (max-width: $break-medium) {
+            grid-template-columns: auto auto ;
+          }
+          @media screen and (min-width: $break-large) {
             grid-template-columns: auto auto auto;
-        }
+          }
+          @media screen and (max-width: $break-small) {
+            grid-template-columns: auto;
+          }
         .card {
             position: relative;
             flex: 1 1;
@@ -61,6 +61,10 @@
             }
             &.carmais {
                 background-color: $carmais-base;
+            }
+            &.somapay {
+                background-color: $somapay-base;
+                border: 1px solid $somapay-base;
             }
             .caption {
                 flex: 1 1;

@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                         <span>
                             <FontAwesomeIcon className="icon" icon={faCopyright} />
                         </span>
-                        <span>2020</span>
+                        <span>{new Date().getFullYear()}</span>
                     </div>
                 </div>
             </div>

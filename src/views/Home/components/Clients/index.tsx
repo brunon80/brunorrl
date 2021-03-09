@@ -5,6 +5,7 @@ import Container from '../../../../components/Container'
 import carmaisLogo from '../../../../assets/images/logo-carmais.png'
 import ganhomaisLogo from '../../../../assets/images/logo-ganhomais.png'
 import korujaLogo from '../../../../assets/images/logo-koruja.png'
+import somapayLogo from '../../../../assets/images/logo-somapay.png'
 
 import './styles.scss'
 
@@ -21,10 +22,13 @@ const Clients: React.FC = () => {
                         <img src={carmaisLogo} alt="cliente carmais" />
                     </div>
                     <div className="grid-item">
-                        <img src={ganhomaisLogo} alt="cliente carmais" />
+                        <img src={ganhomaisLogo} alt="cliente ganhomais" />
                     </div>
                     <div className="grid-item">
-                        <img src={korujaLogo} alt="cliente carmais" />
+                        <img src={korujaLogo} alt="cliente koruja" />
+                    </div>
+                    <div className="grid-item">
+                        <img src={somapayLogo} alt="cliente somapay" />
                     </div>
                 </div>
             </div>
