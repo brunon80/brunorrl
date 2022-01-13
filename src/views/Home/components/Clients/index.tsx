@@ -6,6 +6,7 @@ import carmaisLogo from '../../../../assets/images/logo-carmais.png'
 import ganhomaisLogo from '../../../../assets/images/logo-ganhomais.png'
 import korujaLogo from '../../../../assets/images/logo-koruja.png'
 import somapayLogo from '../../../../assets/images/logo-somapay.png'
+import symplaLogo from '../../../../assets/images/logo-sympla.png'
 
 import './styles.scss'
 
@@ -29,6 +30,9 @@ const Clients: React.FC = () => {
                     </div>
                     <div className="grid-item">
                         <img src={somapayLogo} alt="cliente somapay" />
+                    </div>
+                    <div className="grid-item">
+                        <img src={symplaLogo} alt="cliente sympla" />
                     </div>
                 </div>
             </div>

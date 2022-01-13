@@ -7,6 +7,7 @@ import kinbox from '../../../../assets/images/project-kinbox.png'
 import ganhomais from '../../../../assets/images/project-gannhomais.png'
 import carmais from '../../../../assets/images/project-carmais.png'
 import somapay from '../../../../assets/images/project-somapay.png'
+import sympla from '../../../../assets/images/project-sympla.png'
 
 import './styles.scss'
 
@@ -57,6 +58,15 @@ const Projects: React.FC = () => {
                             <h1 className="title">{t('projects.somapay.description')}</h1>
                             <a target="blank" href="https://somapay.app.link/">
                                 {t('projects.somapay.action')}
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure className="card sympla">
+                        <img className="overlay" src={sympla} alt="Sympla" />
+                        <figcaption className="caption">
+                            <h1 className="title">{t('projects.sympla.description')}</h1>
+                            <a target="blank" href="https://sympla.com.br/">
+                                {t('projects.sympla.action')}
                             </a>
                         </figcaption>
                     </figure>

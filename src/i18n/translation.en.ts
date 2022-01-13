@@ -92,6 +92,10 @@ export default {
                 description: 'All payments in one place. In a few clicks, without bureaucracy.',
                 action: 'See more',
             },
+            sympla: {
+                description: 'Sympla is a platform that connects the world of events and conferences',
+                action: 'See more',
+            },
         },
         clients: {
             title: 'I am proud to have collaborated with some incredible companies',

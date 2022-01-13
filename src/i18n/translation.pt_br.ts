@@ -93,6 +93,10 @@ export default {
                 description: 'Todos os pagamentos em um só lugar. Em poucos cliques, sem burocracia.',
                 action: 'Conheça',
             },
+            sympla: {
+                description: 'O maior objetivo da Sympla é unir você a momentos únicos e inesquecíveis',
+                action: 'Site da empresa',
+            },
         },
         clients: {
             title: 'Eu tenho orgulho de ter colaborado com algumas incríveis empresas',
