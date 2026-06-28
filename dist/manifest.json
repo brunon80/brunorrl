@@ -1,0 +1,14 @@
+{
+  "short_name": "Bruno Rocha",
+  "name": "Bruno Rocha, desenvolvedor Front-end especialista em React e React Native",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00bdc5",
+  "background_color": "#ffffff"
+}
