@@ -1,11 +1,16 @@
 export default {
     translation: {
         header: {
+            home: 'Home',
+            contact: 'Contact',
             callToAction: 'Say hello',
+            brand: 'Bruno Rocha'
         },
         hero: {
             title: 'Front-end developer specialized in React and React Native',
             description: 'I develop solutions, websites and apps, I love doing it',
+            projects: 'View projects',
+            contact: 'Get in touch'
         },
         about: {
             title: 'Hello, my name is Bruno. Nice to meet you',
@@ -13,43 +18,19 @@ export default {
                 'Since the beginning of my journey, I am passionate about technology, I graduated in computer engineering and I became an expert in Front-end (Mobile and Web). I work developing web interfaces using React for about 5 years and React Native for mobile devices for about 3 years, thus satisfying customers and creating hybrid applications for all platforms.',
         },
         skills: {
+            title: 'My Skills',
+            subtitle: 'Technologies and tools I use in my daily life',
             web: {
                 session1: {
                     title: 'Front-end Web',
                     description: 'I like to code things from scratch and bring ideas to life in the browser.',
-                },
-                session2: {
-                    title: 'Languages ​​I speak on the web',
-                    description: 'HTML, CSS, SCSS, Javascript, Typescript, React',
-                },
-                session3: {
-                    title: 'Web Dev Tools',
-                    code: 'Visual Studio Code',
-                    git: 'Git',
-                    linux: 'Linux/Unix',
-                    gulp: 'Gulp',
-                    webpack: 'Webpack',
-                    terminal: 'Terminal',
                 },
             },
             mobile: {
                 session1: {
                     title: 'Front-end Mobile',
                     description:
-                        'I love the idea of ​​having the world in the palm of my hand and even more if I can build this world',
-                },
-                session2: {
-                    title: 'Languages ​​I speak on Mobile',
-                    description: 'React Native, Javascript, Typescript, Swift',
-                },
-                session3: {
-                    title: 'Mobile Dev Tools',
-                    code: 'Visual Studio Code',
-                    git: 'Git',
-                    linux: 'Linux/Unix',
-                    expo: 'Expo',
-                    android: 'Android Studio',
-                    xcode: 'Xcode',
+                        'I love the idea of having the world in the palm of my hand and even more if I can build this world',
                 },
             },
             entrepreneur: {
@@ -58,20 +39,8 @@ export default {
                     description:
                         'Those who have already undertaken can make important decisions that guarantee their success',
                 },
-                session2: {
-                    title: 'Extra skills',
-                    description: 'Project management, Scrum, Kanban, customer interaction',
-                },
-                session3: {
-                    title: 'Experience',
-                    experience: '+5 years of own company',
-                    projects: '3 big projects',
-                    jira: 'Jira',
-                    trello: 'Trello',
-                    todoist: 'Todoist',
-                    pomodoro: 'Pomodoro',
-                },
             },
+            footer: 'Learning and evolving always'
         },
         projects: {
             title: 'My recent work',
@@ -96,27 +65,34 @@ export default {
                 description: 'Sympla is a platform that connects the world of events and conferences',
                 action: 'See more',
             },
+            footer: 'Check out what I can build'
         },
         clients: {
-            title: 'I am proud to have collaborated with some incredible companies',
+            title: 'I am proud to have collaborated with some amazing companies',
+            subtitle: 'Work that has made a positive impact in the market',
+            footer1: 'Companies that trust my work',
+            footer2: '🔥 Always looking for new challenges!',
         },
         call: {
             title: 'Start a project',
             description: 'Interested in working with me? We should talk. I pay for coffee.',
-            action: 'Lets do this',
-        },
-        footer: {
-            title: 'Living, learning and improving one day at a time',
-            ownner: 'Made with React.js and i18n by me',
+            action: "Let's do this",
         },
         contact: {
-            title: 'Thanks for taking the time to reach out. How can I help you today?',
+            title: 'Send me a message',
             form: {
                 name: 'Name',
                 email: 'Email',
-                message: 'Menssage',
-                submit: 'Send',
+                message: 'Message',
+                submit: 'Send message'
             },
+            success: 'Thank you! Your message has been sent successfully!',
+            directContact: 'bruno.rocha2008@gmail.com'
+        },
+        footer: {
+            title: 'Living, learning and improving one day at a time',
+            ownner: 'Made with 💖 by Bruno Rocha',
+            location: 'Made with love in Brazil'
         },
     },
 }

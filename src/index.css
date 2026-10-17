@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personalizações adicionais */
+body {
+  font-family: 'ProximaNovaRegular', sans-serif;
+}
+
+/* Classes customizadas para sessões */
+.no-margin {
+  @apply m-0 my-0;
+}
+
+.colored-session {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+}
+
+.skills {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+}
+
+.projects {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+}
+
+.clients {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+}
+
+.call-to-action {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+}
+
+/* Container wrapper classes */
+.session {
+  @apply w-full;
+}
+
+.container.is-narrow {
+  max-width: 64rem;
+}
+
+.centered {
+  @apply flex flex-col items-center;
+}
