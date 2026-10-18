@@ -107,9 +107,11 @@ const Header: React.FC = () => {
             <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
                 {/* Logo - Esquerda */}
                 <Link to="/" className="flex items-center space-x-2 group" aria-label="Home">
-                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300 group-hover:-translate-y-1">
-                        <span className="text-base font-bold text-white">BR</span>
-                    </div>
+                    <img
+                        src="/br-mark.svg"
+                        alt=""
+                        className="h-9 w-9 rounded-xl shadow-lg transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-cyan-500/25"
+                    />
                     <span className="hidden md:inline-block text-white font-semibold text-sm tracking-tight group-hover:text-cyan-400 transition-colors duration-200">
                         {t('header.brand')}
                     </span>

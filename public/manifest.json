@@ -3,8 +3,9 @@
   "name": "Bruno Rocha, desenvolvedor Front-end especialista em React e React Native",
   "icons": [
     {
-      "src": "favicon.png",
-      "type": "image/x-icon"
+      "src": "br-mark.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
     }
   ],
   "start_url": ".",
