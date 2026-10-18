@@ -7,10 +7,32 @@ const About: React.FC = () => {
     const { t } = useTranslation()
 
     const achievements = [
-        { icon: '🎓', label: 'Engenharia de Computação', color: 'text-cyan-400' },
-        { icon: '💻', label: 'Desenvolvimento Web & Mobile', color: 'text-blue-400' },
-        { icon: '🚀', label: 'Foco em Produtos', color: 'text-purple-400' },
-        { icon: '⚛️', label: 'React Ecosistema', color: 'text-orange-400' }
+        {
+            icon: '🎓',
+            label: t('about.achievements.computerEngineering'),
+            color: 'text-cyan-400'
+        },
+        {
+            icon: '💻',
+            label: t('about.achievements.webMobile'),
+            color: 'text-blue-400'
+        },
+        {
+            icon: '🚀',
+            label: t('about.achievements.productFocus'),
+            color: 'text-purple-400'
+        },
+        {
+            icon: '⚛️',
+            label: t('about.achievements.reactEcosystem'),
+            color: 'text-orange-400'
+        }
+    ]
+
+    const highlights = [
+        { label: t('about.badges.cleanCode'), color: 'text-cyan-400' },
+        { label: t('about.badges.performance'), color: 'text-blue-400' },
+        { label: t('about.badges.learnAlways'), color: 'text-purple-400' }
     ]
 
     return (
@@ -51,15 +73,15 @@ const About: React.FC = () => {
 
                 {/* Additional info */}
                 <div className="mt-8 flex flex-wrap justify-center gap-3 animate-fade-in-up delay-400">
-                    <span className="inline-flex items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm rounded-full text-sm text-cyan-400 border border-slate-700/50 shadow-lg">
-                        🔥 Apaixonado por código limpo
-                    </span>
-                    <span className="inline-flex items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm rounded-full text-sm text-blue-400 border border-slate-700/50 shadow-lg">
-                        🎯 Foco em performance
-                    </span>
-                    <span className="inline-flex items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm rounded-full text-sm text-purple-400 border border-slate-700/50 shadow-lg">
-                        🤝 Aprender sempre
-                    </span>
+                    {highlights.map((item, idx) => (
+                        <span
+                            key={idx}
+                            className={`inline-flex items-center px-4 py-2 bg-slate-800/60 backdrop-blur-sm rounded-full text-sm border border-slate-700/50 shadow-lg ${item.color}`}
+                        >
+                            {idx === 0 ? '🔥 ' : idx === 1 ? '🎯 ' : '🤝 '}
+                            {item.label}
+                        </span>
+                    ))}
                 </div>
             </div>
         </Container>

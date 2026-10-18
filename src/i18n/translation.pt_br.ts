@@ -49,6 +49,17 @@ export default {
             title: 'Olá, meu nome é Bruno. Prazer em conhecê-lo',
             description:
                 'Sou formado em Engenharia de Computação e especialista em desenvolvimento Front-end. Tenho 13 anos de experiência com React, 11 anos com React Native e 5 anos com Node.js, criando aplicações web e mobile.',
+            achievements: {
+                computerEngineering: 'Engenharia de Computação',
+                webMobile: 'Desenvolvimento Web & Mobile',
+                productFocus: 'Foco em Produtos',
+                reactEcosystem: 'React Ecosistema',
+            },
+            badges: {
+                cleanCode: 'Apaixonado por código limpo',
+                performance: 'Foco em performance',
+                learnAlways: 'Aprender sempre',
+            },
         },
         skills: {
             title: 'Minhas Habilidades',

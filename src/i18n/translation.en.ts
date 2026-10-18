@@ -49,6 +49,17 @@ export default {
             title: 'Hello, my name is Bruno. Nice to meet you',
             description:
                 'I hold a degree in Computer Engineering and specialize in Front-end development. I have 13 years of experience with React, 11 years with React Native, and 5 years with Node.js, building web and mobile applications.',
+            achievements: {
+                computerEngineering: 'Computer Engineering',
+                webMobile: 'Web & Mobile Development',
+                productFocus: 'Product Focus',
+                reactEcosystem: 'React Ecosystem',
+            },
+            badges: {
+                cleanCode: 'Passionate about clean code',
+                performance: 'Focused on performance',
+                learnAlways: 'Always learning',
+            },
         },
         skills: {
             title: 'My Skills',
