@@ -14,6 +14,14 @@ export default {
             themeLight: 'Light',
             themeDark: 'Dark'
         },
+        seo: {
+            homeTitle: 'Bruno Rocha | Front-end Developer with React and React Native',
+            homeDescription:
+                'Bruno Rocha is a Front-end developer with 13 years of React experience, 11 with React Native, and 5 with Node.js. Explore his portfolio.',
+            contactTitle: 'Contact | Bruno Rocha — Front-end Developer',
+            contactDescription:
+                'Contact Bruno Rocha to discuss Front-end development projects, React, React Native, and web or mobile applications.',
+        },
         sectionNavigation: {
             label: 'Section navigation',
             home: 'Home',

@@ -14,6 +14,14 @@ export default {
             themeLight: 'Claro',
             themeDark: 'Escuro'
         },
+        seo: {
+            homeTitle: 'Bruno Rocha | Desenvolvedor Front-end React e React Native',
+            homeDescription:
+                'Bruno Rocha é desenvolvedor Front-end com 13 anos de experiência em React, 11 em React Native e 5 em Node.js. Conheça seu portfólio.',
+            contactTitle: 'Contato | Bruno Rocha — Desenvolvedor Front-end',
+            contactDescription:
+                'Entre em contato com Bruno Rocha para conversar sobre projetos de desenvolvimento Front-end, React, React Native e aplicações web e mobile.',
+        },
         sectionNavigation: {
             label: 'Navegação por seções',
             home: 'Início',
