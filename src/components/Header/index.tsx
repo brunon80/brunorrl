@@ -1,13 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const Header: React.FC = () => {
     const location = useLocation()
     const { i18n, t } = useTranslation()
+    const [theme, setTheme] = useState<'dark' | 'light' | 'system'>(() => {
+        const savedTheme = localStorage.getItem('theme')
+        return savedTheme === 'light' || savedTheme === 'system' ? savedTheme : 'dark'
+    })
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        const applyTheme = () => {
+            const isDark = theme === 'system' ? mediaQuery.matches : theme === 'dark'
+            document.documentElement.classList.toggle('dark', isDark)
+            document.documentElement.classList.toggle('theme-light', !isDark)
+            document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
+        }
+
+        applyTheme()
+        localStorage.setItem('theme', theme)
+
+        if (theme === 'system') {
+            mediaQuery.addListener(applyTheme)
+            return () => mediaQuery.removeListener(applyTheme)
+        }
+    }, [theme])
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng)
+    }
+
+    const changeTheme = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const selectedTheme = event.currentTarget.value
+        if (selectedTheme === 'dark' || selectedTheme === 'light' || selectedTheme === 'system') {
+            setTheme(selectedTheme)
+        }
     }
 
     return (
@@ -73,8 +102,19 @@ const Header: React.FC = () => {
                     </div>
                 </div>
 
+                <select
+                    value={theme}
+                    onChange={changeTheme}
+                    className="ml-auto lg:ml-0 max-w-28 px-2 py-2 rounded-lg text-sm text-gray-400 bg-slate-900 border border-slate-700/50 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    aria-label={t('header.theme')}
+                >
+                    <option value="system">{t('header.themeSystem')}</option>
+                    <option value="light">{t('header.themeLight')}</option>
+                    <option value="dark">{t('header.themeDark')}</option>
+                </select>
+
                 {/* Mobile Menu Button */}
-                <button className="lg:hidden ml-auto p-2 text-gray-400 hover:text-white transition-colors duration-200" aria-label="Menu">
+                <button className="lg:hidden ml-2 p-2 text-gray-400 hover:text-white transition-colors duration-200" aria-label="Menu">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                     </svg>

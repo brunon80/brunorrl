@@ -4,7 +4,11 @@ export default {
             home: 'Home',
             contact: 'Contact',
             callToAction: 'Say hello',
-            brand: 'Bruno Rocha'
+            brand: 'Bruno Rocha',
+            theme: 'Theme',
+            themeSystem: 'System',
+            themeLight: 'Light',
+            themeDark: 'Dark'
         },
         hero: {
             title: 'Front-end developer specialized in React and React Native',
