@@ -5,10 +5,31 @@ export default {
             contact: 'Contato',
             callToAction: 'Fale comigo',
             brand: 'Bruno Rocha',
+            language: 'Idioma',
+            openMenu: 'Abrir menu',
+            closeMenu: 'Fechar menu',
+            scrollProgress: 'Progresso da página',
             theme: 'Tema',
             themeSystem: 'Sistema',
             themeLight: 'Claro',
             themeDark: 'Escuro'
+        },
+        sectionNavigation: {
+            label: 'Navegação por seções',
+            home: 'Início',
+            about: 'Sobre mim',
+            skills: 'Habilidades',
+            projects: 'Projetos',
+            clients: 'Clientes',
+            contact: 'Contato'
+        },
+        sectionKickers: {
+            intro: 'Portfólio',
+            about: 'Sobre mim',
+            skills: 'Especialidades',
+            projects: 'Trabalhos selecionados',
+            clients: 'Parcerias',
+            contact: 'Vamos conversar'
         },
         hero: {
             title: 'Desenvolvedor Front-end especialista em React e React Native',
@@ -19,11 +40,24 @@ export default {
         about: {
             title: 'Olá, meu nome é Bruno. Prazer em conhecê-lo',
             description:
-                'Desde o início da minha jornada, sou apaixonado por tecnologia, me formei em engenharia de computação e me tornei especialista em Front-end (Mobile e Web). Trabalho desenvolvendo interfaces web usando React a cerca de 5 anos e React Native para dispositivos móveis a cerca de 3 anos, assim, satisfazendo clientes e criando aplicações hibridas para todas as plataformas.',
+                'Sou formado em Engenharia de Computação e especialista em desenvolvimento Front-end. Tenho 13 anos de experiência com React, 11 anos com React Native e 5 anos com Node.js, criando aplicações web e mobile.',
         },
         skills: {
             title: 'Minhas Habilidades',
             subtitle: 'Tecnologias e ferramentas que utilizo no meu dia a dia',
+            ai: {
+                title: 'Desenvolvimento acelerado com IA',
+                description: 'Tenho domínio no uso de ferramentas de inteligência artificial para acelerar o desenvolvimento de aplicações, mantendo o foco em qualidade e eficiência.',
+                technologies: {
+                    'AI-assisted development': 'Desenvolvimento com IA',
+                    'Prompt engineering': 'Engenharia de prompts',
+                    'AI code review': 'Revisão de código com IA',
+                },
+            },
+            backend: {
+                title: 'Backend com Node.js',
+                description: 'Desenvolvo serviços e APIs com Node.js para dar suporte a aplicações web e mobile.',
+            },
             web: {
                 session1: {
                     title: 'Front-end Web',
@@ -48,6 +82,11 @@ export default {
         projects: {
             title: 'Meu trabalho recente',
             description: 'Esses são alguns dos projetos que trabalhei. Ficou curioso? me envie um ',
+            featured: 'Destaque',
+            deel: {
+                description: 'Como Frontend Engineer na área de despesas da Deel, desenvolvo interfaces intuitivas para gerenciar despesas, colaborando com design e produto e priorizando eficiência, segurança e conformidade.',
+                action: 'Conheça a Deel',
+            },
             kinbox: {
                 description: 'Kinbox é uma plataforma de comunicação que uni o atendimento de várias redes sociais',
                 action: 'Visite o site',
@@ -77,6 +116,7 @@ export default {
             subtitle: 'Trabalhos que marcaram positivamente no mercado',
             footer1: 'Empresas que confiam no meu trabalho',
             footer2: '🔥 Sempre em busca de novos desafios!',
+            currentWorkplace: 'Atual',
         },
         call: {
             title: 'Inicie um projeto',
@@ -87,12 +127,16 @@ export default {
             title: 'Envie-me uma mensagem',
             form: {
                 name: 'Nome',
+                namePlaceholder: 'Seu nome',
                 email: 'E-mail',
+                emailPlaceholder: 'seu@email.com',
                 message: 'Mensagem',
+                messagePlaceholder: 'Como posso ajudar você?',
                 submit: 'Enviar mensagem'
             },
             success: 'Obrigado! Sua mensagem foi enviada com sucesso!',
-            directContact: 'bruno.rocha2008@gmail.com'
+            directContact: 'bruno.rocha2008@gmail.com',
+            directContactLabel: 'Ou entre em contato diretamente:'
         },
         footer: {
             title: 'Vivendo, aprendendo e aprimorando um dia de cada vez',

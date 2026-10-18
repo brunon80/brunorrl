@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import Container from '../../../../components/Container'
+import SectionKicker from '../../../../components/SectionKicker'
 
 const Call: React.FC = () => {
     const { t } = useTranslation()
 
     return (
-        <div id="contact"> {/* ID adicionado para scroll dos CTAs do Hero */}
-            <Container sessionClassName="call-to-action colored-session no-margin relative overflow-hidden">
+        <div>
+            <Container id="contact" sessionClassName="call-to-action colored-session no-margin relative overflow-hidden">
                 {/* Background with gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-800 to-slate-950 pointer-events-none"></div>
                 <div className="absolute top-20 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -18,15 +19,11 @@ const Call: React.FC = () => {
                 <div className="relative z-10 flex flex-col items-center p-8 md:p-12 max-w-5xl mx-auto">
                     {/* Content */}
                     <div className="text-center animate-fade-in-up">
-                        {/* Icon */}
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl mb-4 shadow-lg">
-                            <span className="text-3xl">💬</span>
-                        </div>
-
-                        <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white relative group animate-fade-in-up delay-100">
+                        <SectionKicker number="06" label={t('sectionKickers.contact')} />
+                        <h2 className="mx-auto w-fit max-w-full text-2xl md:text-4xl font-bold mb-4 text-white relative group animate-fade-in-up delay-100">
                             {t('call.title')}
-                            <span className="absolute -inset-x-4 -bottom-2 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur"></span>
-                        </h1>
+                            <span className="absolute inset-x-0 -bottom-2 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur"></span>
+                        </h2>
 
                         <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
                             {t('call.description')}

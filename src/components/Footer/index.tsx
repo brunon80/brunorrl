@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <div className="absolute top-4 left-4 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl"></div>
             <div className="absolute bottom-4 right-4 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl"></div>
 
-            <div className="flex items-center justify-between container is-narrow relative z-10 p-8 py-8 md:py-12 md:p-0">
+            <div className="container is-narrow relative z-10 flex w-full items-center justify-between px-[clamp(1rem,4vw,2rem)] py-8 md:py-12">
                 {/* Logo - Esquerda */}
                 <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300 group-hover:-translate-y-1">

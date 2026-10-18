@@ -5,10 +5,31 @@ export default {
             contact: 'Contact',
             callToAction: 'Say hello',
             brand: 'Bruno Rocha',
+            language: 'Language',
+            openMenu: 'Open menu',
+            closeMenu: 'Close menu',
+            scrollProgress: 'Page progress',
             theme: 'Theme',
             themeSystem: 'System',
             themeLight: 'Light',
             themeDark: 'Dark'
+        },
+        sectionNavigation: {
+            label: 'Section navigation',
+            home: 'Home',
+            about: 'About me',
+            skills: 'Skills',
+            projects: 'Projects',
+            clients: 'Clients',
+            contact: 'Contact'
+        },
+        sectionKickers: {
+            intro: 'Portfolio',
+            about: 'About me',
+            skills: 'Expertise',
+            projects: 'Selected work',
+            clients: 'Collaborations',
+            contact: "Let's talk"
         },
         hero: {
             title: 'Front-end developer specialized in React and React Native',
@@ -19,11 +40,24 @@ export default {
         about: {
             title: 'Hello, my name is Bruno. Nice to meet you',
             description:
-                'Since the beginning of my journey, I am passionate about technology, I graduated in computer engineering and I became an expert in Front-end (Mobile and Web). I work developing web interfaces using React for about 5 years and React Native for mobile devices for about 3 years, thus satisfying customers and creating hybrid applications for all platforms.',
+                'I hold a degree in Computer Engineering and specialize in Front-end development. I have 13 years of experience with React, 11 years with React Native, and 5 years with Node.js, building web and mobile applications.',
         },
         skills: {
             title: 'My Skills',
             subtitle: 'Technologies and tools I use in my daily life',
+            ai: {
+                title: 'AI-accelerated development',
+                description: 'I have advanced expertise in using artificial intelligence tools to accelerate application development while maintaining a focus on quality and efficiency.',
+                technologies: {
+                    'AI-assisted development': 'AI-assisted development',
+                    'Prompt engineering': 'Prompt engineering',
+                    'AI code review': 'AI code review',
+                },
+            },
+            backend: {
+                title: 'Backend with Node.js',
+                description: 'I build Node.js services and APIs to support web and mobile applications.',
+            },
             web: {
                 session1: {
                     title: 'Front-end Web',
@@ -49,6 +83,11 @@ export default {
         projects: {
             title: 'My recent work',
             description: 'These are some of the projects I worked on. Are you curious? send me an ',
+            featured: 'Featured',
+            deel: {
+                description: 'As a Frontend Engineer on Deel’s expenses team, I build intuitive expense management interfaces with design and product, focusing on efficiency, security, and compliance.',
+                action: 'Discover Deel',
+            },
             kinbox: {
                 description: 'Kinbox is a communication platform that unites the service of several social networks',
                 action: 'Visit website',
@@ -76,6 +115,7 @@ export default {
             subtitle: 'Work that has made a positive impact in the market',
             footer1: 'Companies that trust my work',
             footer2: '🔥 Always looking for new challenges!',
+            currentWorkplace: 'Current',
         },
         call: {
             title: 'Start a project',
@@ -86,12 +126,16 @@ export default {
             title: 'Send me a message',
             form: {
                 name: 'Name',
+                namePlaceholder: 'Your name',
                 email: 'Email',
+                emailPlaceholder: 'you@example.com',
                 message: 'Message',
+                messagePlaceholder: 'How can I help you?',
                 submit: 'Send message'
             },
             success: 'Thank you! Your message has been sent successfully!',
-            directContact: 'bruno.rocha2008@gmail.com'
+            directContact: 'bruno.rocha2008@gmail.com',
+            directContactLabel: 'Or contact me directly:'
         },
         footer: {
             title: 'Living, learning and improving one day at a time',

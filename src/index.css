@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --section-top-offset: 4rem;
+  --mobile-navigation-height: 4rem;
+}
+
 /* Personalizações adicionais */
 body {
   font-family: 'ProximaNovaRegular', sans-serif;
@@ -9,17 +14,124 @@ body {
   transition: background-color 300ms ease, color 300ms ease;
 }
 
+.theme-select {
+  color: #e2e8f0;
+  color-scheme: dark;
+}
+
+.theme-select option {
+  color: #f8fafc;
+  background-color: #0f172a;
+}
+
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--section-top-offset);
 }
 
 html.theme-light {
   color-scheme: light;
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --section-top-offset: 4.5rem;
+  }
+}
+
+section.session[id] {
+  min-height: calc(100vh - var(--section-top-offset));
+  min-height: calc(100svh - var(--section-top-offset));
+}
+
+.contact-page {
+  margin-top: var(--section-top-offset);
+}
+
+.contact-page-content {
+  padding-block: 1.5rem !important;
+}
+
+@media (max-width: 1023px) {
+  section.session[id] {
+    min-height: calc(100vh - var(--section-top-offset) - var(--mobile-navigation-height));
+    min-height: calc(100svh - var(--section-top-offset) - var(--mobile-navigation-height));
+  }
+
+  .contact-page-content {
+    padding-block: 0.75rem !important;
+  }
+}
+
+.session-reveal {
+  opacity: 0;
+  transition: opacity 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.session-reveal.session-visible {
+  opacity: 1;
+}
+
+.session-reveal:not(.session-visible) [data-reveal-item] {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 600ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.session-reveal.session-visible [data-reveal-item] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.project-card-image:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+.section-navigation a.is-active .section-navigation-dot {
+  background-color: #22d3ee;
+  box-shadow: 0 0 14px rgb(34 211 238 / 70%);
+  transform: scale(1.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [class*="animate-"] {
+    animation: none !important;
+  }
+
+  .session-reveal,
+  .session-reveal:not(.session-visible) [data-reveal-item],
+  .session-reveal.session-visible [data-reveal-item],
+  .project-card,
+  .project-card img,
+  .project-card a span,
+  .clients [data-reveal-item],
+  .clients img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 html.theme-light body {
   background-color: #f8fafc;
   color: #0f172a;
+}
+
+html.theme-light .theme-select {
+  color: #334155;
+  background-color: #ffffff;
+  color-scheme: light;
+}
+
+html.theme-light .theme-select option {
+  color: #0f172a;
+  background-color: #ffffff;
 }
 
 @layer utilities {

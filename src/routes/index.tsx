@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 const RootRouter: React.FC = () => {
     return (
         <Router>
-            <div>
+            <div className="pb-16 lg:pb-0">
                 <Header />
                 <Switch>
                     <Route path="/contact">

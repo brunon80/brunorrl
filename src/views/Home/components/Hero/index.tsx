@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import Container from '../../../../components/Container'
+import SectionKicker from '../../../../components/SectionKicker'
 
 const Hero: React.FC = () => {
     const { t } = useTranslation()
@@ -35,7 +36,7 @@ const Hero: React.FC = () => {
     }
 
     return (
-        <Container sessionClassName="no-margin relative overflow-hidden">
+        <Container id="home" sessionClassName="no-margin relative overflow-hidden">
             {/* Animated background with multiple layers */}
             <div className="absolute inset-0 -z-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
 
@@ -53,6 +54,7 @@ const Hero: React.FC = () => {
             {/* Content with glassmorphism */}
             <div className="relative z-10 flex flex-col items-center text-center px-4 py-20 min-h-screen justify-center">
                 {/* Animated title */}
+                <SectionKicker number="01" label={t('sectionKickers.intro')} />
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white relative group animate-fade-in-up">
                     {t('hero.title')}
                     <span className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></span>

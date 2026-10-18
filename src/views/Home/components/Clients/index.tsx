@@ -2,17 +2,19 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import Container from '../../../../components/Container'
+import SectionKicker from '../../../../components/SectionKicker'
 import carmaisLogo from '../../../../assets/images/logo-carmais.png'
 import ganhomaisLogo from '../../../../assets/images/logo-ganhomais.png'
 import korujaLogo from '../../../../assets/images/logo-koruja.png'
 import somapayLogo from '../../../../assets/images/logo-somapay.png'
 import symplaLogo from '../../../../assets/images/logo-sympla.png'
+import deelLogo from '../../../../assets/images/logo-deel-partners.png'
 
 const Clients: React.FC = () => {
     const { t } = useTranslation()
 
     return (
-        <Container sessionClassName="clients no-margin relative overflow-hidden">
+        <Container id="clients" sessionClassName="clients no-margin relative overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pointer-events-none"></div>
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -21,14 +23,11 @@ const Clients: React.FC = () => {
             <div className="relative z-10 flex flex-col items-center p-6 max-w-6xl mx-auto w-full">
                 {/* Header */}
                 <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl mb-4 shadow-lg">
-                        <span className="text-3xl">🤝</span>
-                    </div>
-
-                    <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white relative group animate-fade-in-up delay-100">
+                    <SectionKicker number="05" label={t('sectionKickers.clients')} />
+                    <h2 className="mx-auto w-fit max-w-full text-2xl md:text-4xl font-bold mb-4 text-white relative group animate-fade-in-up delay-100">
                         {t('clients.title')}
-                        <span className="absolute -inset-x-4 -bottom-2 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur"></span>
-                    </h1>
+                        <span className="absolute inset-x-0 -bottom-2 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur"></span>
+                    </h2>
 
                     <p className="text-base md:text-lg text-gray-300 max-w-xl mx-auto animate-fade-in-up delay-200">
                         {t('clients.subtitle')}
@@ -36,17 +35,20 @@ const Clients: React.FC = () => {
                 </div>
 
                 {/* Logos grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 w-full mb-8 animate-fade-in-up delay-300">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 w-full mb-8 animate-fade-in-up delay-300">
                     {[
                         {src: carmaisLogo, alt: 'carmais'},
                         {src: ganhomaisLogo, alt: 'ganhomais'},
                         {src: korujaLogo, alt: 'koruja'},
                         {src: somapayLogo, alt: 'somapay'},
-                        {src: symplaLogo, alt: 'sympla'}
+                        {src: symplaLogo, alt: 'sympla'},
+                        {src: deelLogo, alt: 'Deel', currentWorkplace: true}
                     ].map((logoData, i) => (
                         <div 
-                            key={i} 
-                            className="group relative flex justify-center items-center p-4 md:p-6 hover:bg-slate-800/50 rounded-xl transition-all duration-300 border border-slate-700/50 group-hover:border-cyan-500/50"
+                            key={logoData.alt}
+                            data-reveal-item
+                            style={{ transitionDelay: `${i * 70}ms` }}
+                            className="group relative flex justify-center items-center p-4 md:p-6 hover:-translate-y-1 hover:bg-slate-800/50 rounded-xl transition-all duration-300 border border-slate-700/50 hover:border-cyan-500/50"
                         >
                             {/* Glow effect */}
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 to-purple-900/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -54,17 +56,23 @@ const Clients: React.FC = () => {
                             {/* Logo container */}
                             <div className="relative z-10 w-full flex justify-center">
                                 <div className="flex items-center justify-center p-4 md:p-6 bg-slate-800/80 backdrop-blur-md rounded-xl border-2 border-slate-600 group-hover:border-cyan-400 transition-all duration-300 transform group-hover:scale-105 shadow-lg">
-                                    <img 
-                                    style={{
-  filter: "brightness(0) saturate(100%) invert(100%) sepia(87%) saturate(754%) hue-rotate(220deg) brightness(124%) contrast(100%)"
-}}
-                                        src={logoData.src} 
-                                        alt={logoData.alt} 
-                                        className="h-12 md:h-16 w-auto object-contain drop-shadow-lg"
+                                    <img
+                                        style={{
+                                            filter: "brightness(0) saturate(100%) invert(100%) sepia(87%) saturate(754%) hue-rotate(220deg) brightness(124%) contrast(100%)"
+                                        }}
+                                        src={logoData.src}
+                                        alt={logoData.alt}
+                                        className="h-12 md:h-16 w-auto max-w-full object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
                                         loading="lazy"
                                     />
                                 </div>
                             </div>
+
+                            {logoData.currentWorkplace && (
+                                <span className="absolute right-2 top-2 z-20 rounded-full bg-cyan-500/15 px-2 py-1 text-[10px] font-semibold text-cyan-300">
+                                    {t('clients.currentWorkplace')}
+                                </span>
+                            )}
 
                             {/* Shine effect */}
                             <div className="absolute inset-0 overflow-hidden rounded-xl pointer-events-none">
