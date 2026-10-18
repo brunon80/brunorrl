@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06B6D4"/>
+      <stop offset=".55" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+  <path
+    stroke="url(#brand)"
+    stroke-width="52"
+    d="M132 26h248a106 106 0 0 1 106 106v248a106 106 0 0 1-106 106H132A106 106 0 0 1 26 380V132A106 106 0 0 1 132 26Z"
+  />
+  <path
+    fill="url(#brand)"
+    fill-rule="evenodd"
+    d="M145 148c31-6 65-9 101-9 78 0 127 26 127 78 0 34-21 56-55 67 41 9 66 34 66 72 0 54-48 83-127 83h-61V148h-51Zm73 48v75h28c35 0 53-13 53-39 0-25-19-36-54-36h-27Zm0 127v87h52c37 0 57-14 57-42 0-29-20-45-58-45h-51Z"
+    clip-rule="evenodd"
+  />
+</svg>
